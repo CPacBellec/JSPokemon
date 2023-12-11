@@ -4,7 +4,7 @@ import { pokemons } from "./src/utils/pokemon.js";
 import 'dotenv/config'
 
 const app = express();
-const port = process.env.PORT || 300;
+const port = process.env.PORT || 3000;
 
 app.get('/',(req, res) => {res.send('wololo')})
 app.get('/random', async (req, res) => {
