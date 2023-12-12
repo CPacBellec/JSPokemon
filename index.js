@@ -1,10 +1,13 @@
 import express from "express";
 import {simpleRandom}  from "./src/utils/randomNumber.js";
 import { pokemons } from "./src/utils/pokemon.js";
+import cors from "cors";
 import 'dotenv/config'
 
 const app = express();
 const port = process.env.PORT || 3000;
+
+app.use(cors());
 
 app.get('/',(req, res) => {res.send('wololo')})
 app.get('/random', async (req, res) => {
